@@ -1,0 +1,200 @@
+/*this is the style sheet for my gallery page*/
+*{
+  padding: 0;
+  margin: 0; 
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+ul {
+  overflow: hidden;
+  list-style-type: none;
+  text-align: right; 
+}
+ul li a, ul li{
+  display: inline-block; 
+}
+li a{
+  padding: 20px; 
+  text-decoration: none;
+  color: white; 
+  font-size: 20px; 
+}
+li :hover{
+  color: goldenrod; 
+}
+li :active{
+  color: black; 
+}
+.head {
+  background-image: url('img/workshop.jpg');
+  height: 65%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logopic{
+  padding: 10px; 
+}
+.logo{
+  padding: 20px; 
+  float: left; 
+}
+.para{
+  /* The image used */
+  background-image: url('img/workshop.jpg');
+
+  /* Set a specific height */
+  min-height: 650px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: local;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-family: 'Playfair Display';
+
+}
+/*body of the page*/
+
+.grid-wrapper{
+display: grid;
+grid-gap: 100px;
+grid-template-columns: auto auto auto;
+padding: 40px;
+text-align: center;
+padding-bottom: 130px; 
+}
+.bodee{
+  background-image: linear-gradient(0deg, black, grey, white);  
+  margin-right: 25px; 
+  margin-left: 25px;
+}
+.footer{
+  background-color: black; 
+  color: white; 
+  height: 90px; 
+  font-family: 'Old Standard TT';
+  font-size: 20px; 
+  margin-left: 25px; 
+  margin-right: 25px; 
+}
+.foot-wrapper{
+  padding: 20px; 
+  text-align: center;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background-image: linear-gradient(to bottom right,purple, blue, red, yellow);
+  color: white;
+}
+.fa-contact{
+  background: green; 
+  color: white; 
+  width: 60px; 
+}
+/*add modal effect on picture*/
+.modal {
+  z-index:1;
+  display:none;
+  padding-top:10px;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.8)
+}
+.modal-content{
+  margin: auto; 
+  display: block; 
+  width: 80%; 
+  max-width: 700px; 
+  padding: 100px; 
+}
+#myImg{
+  border: 8px solid floralwhite;
+  padding: 0;
+  margin: 0;  
+}
+.picture:hover {
+  opacity:0.60;
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+} 
+.modal-content, #caption {   
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/*iphone 6/7/8 */
+@media(max-width: 375px)
+{
+  .footer {
+    background-color: black;
+    color: white;
+    height: 165px;
+    font-family: 'Old Standard TT';
+    font-size: 20px;
+    margin: 0;
+  }
+  .grid-wrapper {
+    display: inline;
+    padding: 10px;
+  }
+  #myImg{padding: 12px;}
+  .bodee{
+    background-image: linear-gradient(45deg, transparent, transparent);
+    margin-right: 25px;
+    margin-left: 25px;}
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 86%;
+      max-width: 729px;
+      padding: 0;
+  }
+  ul li a, ul li {display: inline;}
+  li a{line-height: 50px;}
+}
+
+
+
+
+
+
